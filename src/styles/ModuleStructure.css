@@ -1,0 +1,424 @@
+/* ModuleStructure.css - สไตล์สำหรับ Module Structure Component */
+
+.module-structure-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: slideDown 0.6s ease-out;
+}
+
+.header-section h1 {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 32px;
+}
+
+.header-section p {
+  margin: 0;
+  color: #666;
+  font-size: 16px;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modules List */
+.modules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.module-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Module Title Bar */
+.module-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  user-select: none;
+}
+
+.module-title-bar:hover {
+  transform: translateX(5px);
+}
+
+.title-content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.title-content h3 {
+  margin: 0;
+  font-size: 20px;
+  flex: 1;
+}
+
+.duration {
+  font-size: 14px;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+.expand-icon {
+  display: inline-block;
+  font-size: 12px;
+  transition: transform 0.3s;
+  margin-left: 10px;
+}
+
+.expand-icon.expanded {
+  transform: rotate(180deg);
+}
+
+/* Module Details */
+.module-details {
+  padding: 30px;
+  animation: expandDown 0.4s ease-out;
+}
+
+@keyframes expandDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+  }
+}
+
+.module-description {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.module-description p {
+  margin: 0;
+  color: #555;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* Video Section */
+.video-section {
+  margin-bottom: 30px;
+}
+
+.video-section h4 {
+  margin: 0 0 15px;
+  color: #333;
+  font-size: 18px;
+}
+
+.video-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper iframe {
+  display: block;
+  width: 100%;
+}
+
+/* Lessons Section */
+.lessons-section {
+  margin-bottom: 30px;
+}
+
+.lessons-section h4 {
+  margin: 0 0 15px;
+  color: #333;
+  font-size: 18px;
+}
+
+.lessons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lessons-list li {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #555;
+  font-size: 15px;
+}
+
+.lessons-list li:last-child {
+  border-bottom: none;
+}
+
+.lesson-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  margin-right: 15px;
+  flex-shrink: 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.lesson-text {
+  padding-top: 4px;
+}
+
+/* Content Section */
+.content-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.content-section h4 {
+  margin: 0 0 15px;
+  color: #333;
+  font-size: 18px;
+}
+
+.content-text p {
+  margin: 0 0 15px;
+  color: #555;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.content-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Forum Section */
+.forum-section {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.forum-section h4 {
+  margin: 0 0 20px;
+  color: #333;
+  font-size: 18px;
+}
+
+/* Forum Form */
+.forum-form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.forum-input {
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  resize: vertical;
+  min-height: 100px;
+  transition: border-color 0.3s;
+  color: #333;
+}
+
+.forum-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.submit-btn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Forum Posts */
+.forum-posts {
+  margin-top: 20px;
+}
+
+.forum-post {
+  background: #f9f9f9;
+  border-left: 4px solid #667eea;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.post-header strong {
+  color: #333;
+}
+
+.post-time {
+  color: #999;
+  font-size: 12px;
+}
+
+.post-content {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.reply-btn,
+.like-btn {
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #666;
+}
+
+.reply-btn:hover,
+.like-btn:hover {
+  background: #f0f0f0;
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.no-posts {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-style: italic;
+}
+
+/* Console Log Info */
+.console-log-info {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.console-log-info p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .module-structure-container {
+    padding: 15px;
+  }
+
+  .header-section h1 {
+    font-size: 24px;
+  }
+
+  .module-details {
+    padding: 20px;
+  }
+
+  .title-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .duration {
+    margin-left: 0;
+  }
+
+  .video-wrapper iframe {
+    height: 200px;
+  }
+}

@@ -1,0 +1,197 @@
+/* AccessControl.css - สไตล์สำหรับ Access Control Component */
+
+.access-control-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.user-status-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.user-status-card h2 {
+  margin: 0 0 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.status-badge {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.badge {
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.badge-free {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.badge-premium {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.toggle-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.toggle-btn:active {
+  transform: translateY(0);
+}
+
+/* Modules Grid */
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.module-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.module-card:hover:not(.locked) {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.module-card.locked {
+  opacity: 0.9;
+}
+
+.module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.module-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.premium-badge {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.module-description {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.module-content {
+  flex: 1;
+}
+
+.content-text {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.video-container {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Locked Content */
+.locked-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 8px;
+}
+
+.lock-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.lock-message {
+  color: #666;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.purchase-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.purchase-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .module-card {
+    padding: 15px;
+  }
+
+  .module-header {
+    flex-direction: column;
+  }
+}
